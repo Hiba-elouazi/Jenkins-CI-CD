@@ -12,7 +12,7 @@ pipeline {
     // Partie 5 : déclencheurs automatiques
     triggers {
         // 5.1 : build toutes les 5 minutes, même sans commit (à commenter après l'observation)
-        // cron('H/5 * * * *')
+        cron('H/5 * * * *')
         // 5.2 : build à chaque push GitHub (webhook exposé avec ngrok)
         githubPush()
     }
